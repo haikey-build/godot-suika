@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c383erv5vjxa8"]
+
+[ext_resource type="Texture2D" uid="uid://btqtgwg8aepkb" path="res://assets/pineapple.png" id="1_2twt1"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_jtkeg"]
+[ext_resource type="Script" path="res://pineapple.gd" id="1_l5qix"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_enq5f"]
+radius = 83.0
+
+[node name="Pineapple" type="RigidBody2D"]
+physics_material_override = ExtResource("1_jtkeg")
+script = ExtResource("1_l5qix")
+
+[node name="Pineapple" type="Sprite2D" parent="."]
+texture = ExtResource("1_2twt1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_enq5f")

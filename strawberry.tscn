@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlguwx3rh3vyq"]
+
+[ext_resource type="Script" path="res://strawberry.gd" id="1_gj56p"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_iiboc"]
+[ext_resource type="Texture2D" uid="uid://c0v1b8qdw3032" path="res://assets/strawberry.png" id="1_qu0d6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqg68"]
+radius = 20.025
+
+[node name="Strawberry" type="RigidBody2D"]
+physics_material_override = ExtResource("1_iiboc")
+script = ExtResource("1_gj56p")
+
+[node name="Strawberry" type="Sprite2D" parent="."]
+texture = ExtResource("1_qu0d6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aqg68")

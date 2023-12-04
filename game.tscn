@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4frs3hjq7glw"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_agtpr"]
+[ext_resource type="PackedScene" uid="uid://domk5xqboq50" path="res://bucket.tscn" id="1_gi6aj"]
+[ext_resource type="Texture2D" uid="uid://y1yjsgkhqr2b" path="res://assets/background.png" id="2_m7gaq"]
+[ext_resource type="PackedScene" uid="uid://0fwwkmnsmugu" path="res://cloud.tscn" id="4_5m06v"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_agtpr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(210, 290)
+zoom = Vector2(1.35, 1.35)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(211, 294)
+texture = ExtResource("2_m7gaq")
+
+[node name="Bucket" parent="." instance=ExtResource("1_gi6aj")]
+position = Vector2(-40, 10)
+
+[node name="Cloud" parent="." instance=ExtResource("4_5m06v")]
+position = Vector2(355, 10)
+
+[connection signal="dropped_fruit" from="Cloud" to="." method="_on_cloud_dropped_fruit"]

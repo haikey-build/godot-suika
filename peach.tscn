@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8khodxnd0t38"]
+
+[ext_resource type="Script" path="res://peach.gd" id="1_krmaq"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_rotrs"]
+[ext_resource type="Texture2D" uid="uid://c8aa4y0oktgee" path="res://assets/peach.png" id="1_xf7i2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c3rfl"]
+radius = 74.0608
+
+[node name="Peach" type="RigidBody2D"]
+physics_material_override = ExtResource("1_rotrs")
+script = ExtResource("1_krmaq")
+
+[node name="Peach" type="Sprite2D" parent="."]
+texture = ExtResource("1_xf7i2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c3rfl")

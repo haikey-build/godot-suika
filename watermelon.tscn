@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cptihgymnhagt"]
+
+[ext_resource type="Script" path="res://watermelon.gd" id="1_3u5km"]
+[ext_resource type="Texture2D" uid="uid://ddvkbs5pr6vml" path="res://assets/watermelon.png" id="1_82k85"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_n3iy3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oqhfp"]
+radius = 121.103
+
+[node name="Watermelon" type="RigidBody2D"]
+physics_material_override = ExtResource("1_n3iy3")
+script = ExtResource("1_3u5km")
+
+[node name="Watermelon" type="Sprite2D" parent="."]
+texture = ExtResource("1_82k85")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oqhfp")

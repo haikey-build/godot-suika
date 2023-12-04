@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckkq3bsbmi1pl"]
+
+[ext_resource type="Script" path="res://tomato.gd" id="1_kcnrs"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_peu15"]
+[ext_resource type="Texture2D" uid="uid://bels4lcwnowe5" path="res://assets/tomato.png" id="1_tr44s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3gkvv"]
+radius = 51.1566
+
+[node name="Tomato" type="RigidBody2D"]
+physics_material_override = ExtResource("1_peu15")
+script = ExtResource("1_kcnrs")
+
+[node name="Tomato" type="Sprite2D" parent="."]
+texture = ExtResource("1_tr44s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3gkvv")

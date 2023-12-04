@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://byjimc6dts4c"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_mafwh"]
+[ext_resource type="Script" path="res://orangish.gd" id="1_psasl"]
+[ext_resource type="Texture2D" uid="uid://c5yldv2tnlo22" path="res://assets/orangish.png" id="2_smucp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_65wuj"]
+radius = 32.0624
+
+[node name="Orangish" type="RigidBody2D"]
+physics_material_override = ExtResource("1_mafwh")
+script = ExtResource("1_psasl")
+
+[node name="Orange" type="Sprite2D" parent="."]
+texture = ExtResource("2_smucp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_65wuj")

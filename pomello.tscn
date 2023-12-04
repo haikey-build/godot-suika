@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://72ams7kovk4t"]
+
+[ext_resource type="Texture2D" uid="uid://j2ru4ybgm0fl" path="res://assets/pomello.png" id="1_4sa8n"]
+[ext_resource type="Script" path="res://pomello.gd" id="1_hmq3e"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_mrbfx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i61xj"]
+radius = 60.075
+
+[node name="Pomello" type="RigidBody2D"]
+physics_material_override = ExtResource("1_mrbfx")
+script = ExtResource("1_hmq3e")
+
+[node name="Pomello" type="Sprite2D" parent="."]
+texture = ExtResource("1_4sa8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_i61xj")

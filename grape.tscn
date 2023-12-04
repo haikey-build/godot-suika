@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://5v3br7kxb41u"]
+
+[ext_resource type="Texture2D" uid="uid://c1pajksuwge26" path="res://assets/grape.png" id="1_dvpu8"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_kh2pi"]
+[ext_resource type="Script" path="res://grape.gd" id="1_qc5go"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yskqu"]
+radius = 30.0666
+
+[node name="Grape" type="RigidBody2D"]
+physics_material_override = ExtResource("1_kh2pi")
+script = ExtResource("1_qc5go")
+
+[node name="Grape" type="Sprite2D" parent="."]
+texture = ExtResource("1_dvpu8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yskqu")

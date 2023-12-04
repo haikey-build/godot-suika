@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4ps4rt6gv2dh"]
+
+[ext_resource type="Texture2D" uid="uid://dc6287tjkekat" path="res://assets/orange.png" id="1_0lvtu"]
+[ext_resource type="Script" path="res://orange.gd" id="1_2tojc"]
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_n5ckp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6s1dq"]
+radius = 41.0
+
+[node name="Orange" type="RigidBody2D"]
+physics_material_override = ExtResource("1_n5ckp")
+script = ExtResource("1_2tojc")
+
+[node name="Orange" type="Sprite2D" parent="."]
+texture = ExtResource("1_0lvtu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6s1dq")

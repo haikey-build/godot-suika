@@ -1,0 +1,66 @@
+[gd_scene load_steps=14 format=3 uid="uid://0fwwkmnsmugu"]
+
+[ext_resource type="Script" path="res://cloud.gd" id="1_c477v"]
+[ext_resource type="Texture2D" uid="uid://bvabsjjek5xst" path="res://assets/cloud.png" id="1_guylm"]
+[ext_resource type="Texture2D" uid="uid://c3ufj4jxladi5" path="res://assets/cherry.png" id="3_rfrph"]
+[ext_resource type="Texture2D" uid="uid://c0v1b8qdw3032" path="res://assets/strawberry.png" id="4_y7k2b"]
+[ext_resource type="Texture2D" uid="uid://c1pajksuwge26" path="res://assets/grape.png" id="5_tk2oa"]
+[ext_resource type="Texture2D" uid="uid://c5yldv2tnlo22" path="res://assets/orangish.png" id="6_1c04k"]
+[ext_resource type="Texture2D" uid="uid://ytx0vcqmeq32" path="res://assets/melon.png" id="7_4lo1y"]
+[ext_resource type="Texture2D" uid="uid://dc6287tjkekat" path="res://assets/orange.png" id="8_822rb"]
+[ext_resource type="Texture2D" uid="uid://c8aa4y0oktgee" path="res://assets/peach.png" id="9_haumm"]
+[ext_resource type="Texture2D" uid="uid://btqtgwg8aepkb" path="res://assets/pineapple.png" id="10_gxo4i"]
+[ext_resource type="Texture2D" uid="uid://j2ru4ybgm0fl" path="res://assets/pomello.png" id="11_5emcw"]
+[ext_resource type="Texture2D" uid="uid://bels4lcwnowe5" path="res://assets/tomato.png" id="12_d772n"]
+[ext_resource type="Texture2D" uid="uid://ddvkbs5pr6vml" path="res://assets/watermelon.png" id="13_8hkn3"]
+
+[node name="Cloud" type="Node2D"]
+script = ExtResource("1_c477v")
+
+[node name="Cloud" type="Sprite2D" parent="."]
+position = Vector2(51, -32)
+texture = ExtResource("1_guylm")
+
+[node name="Cherry" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_rfrph")
+
+[node name="Strawberry" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_y7k2b")
+
+[node name="Grape" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_tk2oa")
+
+[node name="Orangish" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_1c04k")
+
+[node name="Melon" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_4lo1y")
+
+[node name="Orange" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_822rb")
+
+[node name="Peach" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_haumm")
+
+[node name="Pineapple" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("10_gxo4i")
+
+[node name="Pomello" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("11_5emcw")
+
+[node name="Tomato" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("12_d772n")
+
+[node name="Watermelon" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("13_8hkn3")

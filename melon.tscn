@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjd4jwso54fki"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://q0ok1njvrd3b" path="res://fruit_physics.tres" id="1_nrdsc"]
+[ext_resource type="Script" path="res://melon.gd" id="1_r26aq"]
+[ext_resource type="Texture2D" uid="uid://ytx0vcqmeq32" path="res://assets/melon.png" id="1_v1k0e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lvsky"]
+radius = 103.005
+
+[node name="Melon" type="RigidBody2D"]
+physics_material_override = ExtResource("1_nrdsc")
+script = ExtResource("1_r26aq")
+
+[node name="Melon" type="Sprite2D" parent="."]
+texture = ExtResource("1_v1k0e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lvsky")
